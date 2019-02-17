@@ -178,6 +178,11 @@ class ReactExoplayerView extends FrameLayout implements
         eventEmitter.setViewId(id);
     }
 
+    @Override
+    public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(System.identityHashCode(this));
+    }
+
     private void createViews() {
         clearResumePosition();
         mediaDataSourceFactory = buildDataSourceFactory(true);
